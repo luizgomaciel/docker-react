@@ -1,5 +1,6 @@
-language: generic 
 sudo: required
+language: generic 
+
 services:
   - docker
 
@@ -7,5 +8,5 @@ before_install:
   - docker build -t luizgomaciel/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run luizgomaciel/docker-react npm run test -- --coverage
+  - docker run -e CI=true luizgomaciel/docker-react npm run test -- --coverage
 
