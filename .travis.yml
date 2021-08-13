@@ -6,6 +6,9 @@ services:
 before_install:
   - docker build -t luizgomaciel/docker-react -f Dockerfile.dev .
 
+install: 
+  - travis_wait mvn install
+
 script:
   - docker run luizgomaciel/docker-react npm run test -- --coverage
 
