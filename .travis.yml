@@ -12,5 +12,3 @@ deploy:
   api_key:
     secure: $HEROKU_API_KEY
   app: docker-react-heroku-brazil
-
-d87fedf3-833f-4684-b9fc-fcc3b41b01a8
