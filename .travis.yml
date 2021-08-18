@@ -1,7 +1,7 @@
 sudo: required
 language: node_js
 node_js:
-  - 10
+  - 6
 
 services:
   - docker
@@ -9,7 +9,8 @@ services:
 before_install:
   - docker build -t luizgomaciel/docker-react -f Dockerfile.dev .
 
-
+script:
+  - docker run -e CI=true luizgomaciel/docker-react npm run test -- --coverage
 
 deploy:
   provider: heroku
