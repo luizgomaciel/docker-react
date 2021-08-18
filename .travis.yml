@@ -15,18 +15,4 @@ script:
 deploy:
   provider: heroku
   api_key: $HEROKU_API_KEY
-  edge: true 
   app: docker-react-heroku-brazil
-  skip_cleanup: true
-
-#deploy:
-#  provider: heroku
-#  region: 'us-east-1'
-#  app: 'docker'
-#  env: 'docker-env'
-#  bucket_name: 'elasticbeanstalk-us-east-1-923445559289'
-#  bucket_path: 'docker'
-#  on:
-#    branch: master
-#  access_key_id: $AWS_ACCESS_KEY
-#  secret_access_key: $AWS_SECRET_KEY
