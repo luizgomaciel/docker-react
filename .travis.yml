@@ -13,6 +13,7 @@ script:
 deploy:
   provider: heroku
   api_key: $HEROKU_API_KEY
+  edge: true 
   app: docker-react-heroku-brazil
   skip_cleanup: true
 
