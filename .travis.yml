@@ -11,8 +11,8 @@ script:
   - docker run -e CI=true luizgomaciel/docker-react npm run test -- --coverage
 
 deploy:
-  provider: heroku
-  api_key:
-    secure: $HEROKU_API_KEY
-  app: docker-react-heroku-brazil
+  provider: heroku:git
+  api_key: $HEROKU_API_KEY
+  edge: true 
+  #app: docker-react-heroku-brazil
 
