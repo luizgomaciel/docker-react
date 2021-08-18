@@ -8,7 +8,7 @@ before_install:
   - docker build -t luizgomaciel/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e luizgomaciel/docker-react npm run test -- --coverage
+  - docker run -e CI=true luizgomaciel/docker-react npm run test -- --coverage
 
 deploy:
   provider: heroku
