@@ -13,7 +13,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: 'd87fedf3-833f-4684-b9fc-fcc3b41b01a8'
+    secure: $HEROKU_API_KEY
   app: 'docker-react-heroku-brazil'
   on:
     branch: master
