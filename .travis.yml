@@ -10,13 +10,7 @@ before_install:
 script:
   - docker run -e CI=true luizgomaciel/docker-react npm run test -- --coverage
 
-deploy:
-  provider: heroku
-  api_key:
-    secure: HEROKU_SECRET_KEY
-  app: 'docker-react-heroku-brazil'
-  on:
-    branch: master
+
 
 
 #deploy:
